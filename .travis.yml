@@ -9,6 +9,13 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    reciepients:
+    - $FRONTEND_LEADER_EMAIL
+    on_success: always
+    on_failure: always
+# manda emails a esos mails cuando es exitoso y cuando falla
 deploy:
   provider: pages
   skip_cleanup: true
